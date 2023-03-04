@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/calendar.css" %}" />
+
+    <script>
+    function goTo(val) {
+        window.location.replace('/' + val.slice(0, 4) + '/' + convert(val.slice(5, 7)));
+    }
+    function convert(val) {
+        if (val[0] === 0) return val[1];
+        else return val;
+    }
+    </script>
+</head>
+<body>
+<header>
+</header>
+<div id="calendar">{{ calendar }}</div>
+</body>
+</html>

@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from school_app.views import StudentView, TeacherView, FormView
+from app_school.views import StudentView, TeacherView, FormView
+from app_timetable.views import timetable
 
 urlpatterns = [
+    path('<int:year>/<int:month>/', timetable),
     path('admin/', admin.site.urls),
-    path('students/<int:pk>', StudentView.as_view()),
-    path('teachers/<int:pk>', TeacherView.as_view()),
-    path('forms/<int:pk>', FormView.as_view()),
+    path('students/<int:pk>/', StudentView.as_view()),
+    path('teachers/<int:pk>/', TeacherView.as_view()),
+    path('forms/<int:pk>/', FormView.as_view()),
 ]

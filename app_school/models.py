@@ -3,7 +3,6 @@ from django.contrib.auth.models import User
 
 
 class Teacher(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     surname = models.CharField(max_length=50)
     homeform_teacher = models.BooleanField(default=False)
@@ -28,7 +27,6 @@ class Subject(models.Model):
 
 
 class Student(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=50)
     surname = models.CharField(max_length=50)
     birth_date = models.DateField()

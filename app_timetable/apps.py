@@ -1,8 +1,6 @@
 from django.apps import AppConfig
 
 
-class SchoolAppConfig(AppConfig):
+class AppTimetableConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'school_app'
-
-
+    name = 'app_timetable'

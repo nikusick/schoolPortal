@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+body {
+ overflow: auto;
+ font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+ font-weight: 100;
+ color: rgba(255, 255, 255, 1);
+ margin: 0;
+ padding: 0;
+ background: #4A4A4A;
+}
+
+.header {
+  height: 50px;
+  width: 420px;
+  background: rgba(66, 66, 66, 1);
+  text-align: center;
+  position: relative;
+  z-index: 100;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 50px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+table {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  text-align: center;
+  border-collapse: collapse;
+  background: #4A4A4A;
+  vertical-align: top;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
+}
+
+th {
+  font-size: 22px;
+  font-weight: 300;
+  padding: 12px 10px;
+  border-bottom: 2px solid white;
+  color: white;
+}
+
+tbody tr:nth-child(2) {
+  border-bottom: 2px solid white;
+}
+
+td {
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+input[type='month'] {
+    width: 30px;
+}
+input[type="month"]::-webkit-calendar-picker-indicator {
+    opacity: 1;
+    display: block;
+    background-image: url("/static/img/calendar_icon.png");
+    width: 100%;
+    height: 20px;
+    border-width: thin;
+    background-color: transparent;
+}
+
+input[type="month"]::-webkit-datetime-edit-year-field,
+input[type="month"]::-webkit-datetime-edit-month-field {
+    color: transparent;
+}
+
+summary::marker {
+    color: transparent;
+}
